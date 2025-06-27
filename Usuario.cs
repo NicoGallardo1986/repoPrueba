@@ -8,17 +8,12 @@ namespace Peluqueria
 {
     public class Usuario
     {
-        //atributos de instancia
         private int id;
         private string user;
         private string password;
         private string passwordConfirma;
         private string nombre;
-        private int idTipo;
-
-        // constructor creado por el compilador
-
-        //implementación de propiedades
+        private int idTipo;        
         public int Id { get => id; set => id = value; }
         public string User { get => user; set => user = value; }
         public string Password { get => password; set => password = value; }
