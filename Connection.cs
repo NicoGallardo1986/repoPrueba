@@ -9,21 +9,24 @@ namespace Peluqueria
 {
     public class Conexion
     {
+        //Atributos de Clase
         private const string servidor = "datasource=127.0.0.1";
         private const string puerto = "port=3306";
         private const string username = "username = ";
         private const string password = "password=";
         private const string bd = "database=peluqueria";
+        
+        //Atributos de Instancia
+        private string cadenaConexion;
 
-        public Conexion() //El constructor queda vacío.
-        { //El compilador se encarga de implementarlo
-
-        } //si no lo hacemos nosotros
-        public MySqlConnection getConexion()
-        {
-
-            string cadenaConexion = servidor + ";" + puerto + ";" +
+        public Conexion() 
+        { 
+            cadenaConexion = servidor + ";" + puerto + ";" +
             username + ";" + password + ";" + bd;
+        } 
+        //creacion y retorno de un objeto para conexion
+        public MySqlConnection getConexion()
+        {            
             return new MySqlConnection(cadenaConexion);
         }
     }
